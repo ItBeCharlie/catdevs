@@ -1,1 +1,31 @@
-gongaga.
+## File Structure
+
+-   `js/`
+    -   `dist/`
+        -   js output of ts compile
+    -   `src/`
+        -   Source Ts files of the project
+-   `scss/`
+    -   `abstracts/`
+        -   `_functions.scss`
+            -   Contains all scss functions
+        -   `_mixins.scss`
+            -   Contains all scss mixins
+        -   `_variables.scss`
+            -   Contains all scss variables
+    -   `base/`
+        -   `_animations.scss`
+            -   Contains all scss animations
+        -   `_base.scss`
+            -   Place for all generic scss attributes ex. body{}, \*{}
+        -   `_typography.scss`
+            -   Place for text manipulations
+        -   `_utilities.scss`
+            -   General classes used across the project
+    -   `components/`
+        -   Major components of the project
+    -   `layout/`
+        -   Scss files for maintaining a layout
+    -   `pages/`
+        -   `_home.scss`
+            -   Scss for the main page
