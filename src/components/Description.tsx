@@ -24,6 +24,7 @@ export const Description: React.FC<DescriptionProps> = ({
                 p={6}
                 m="10px auto"
                 display="flex"
+                boxSize="100%"
             >
                 <Avatar name={name} src={img} />
                 <Box ml="5px">

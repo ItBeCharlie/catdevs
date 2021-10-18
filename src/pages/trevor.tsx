@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
 import { Description } from 'src/components/Description';
+import { trevorImg } from 'src/utils/constants';
 
 interface trevorProps {}
 
@@ -17,7 +18,7 @@ const trevor: React.FC<trevorProps> = ({}) => {
             My name is Trevor
             <Description
                 name="Trevor Brown"
-                img="https://i.imgur.com/bIWaVG1.png"
+                img={trevorImg}
                 degree="Bachelors"
                 position="UI Engineer"
             />
