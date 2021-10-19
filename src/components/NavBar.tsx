@@ -23,7 +23,7 @@ export const NavBar: React.FC<NavBarProps> = ({}) => {
             <NextLink href="/charlie">
                 <Link px="10px">
                     <Description
-                        name="Charlie Degennaro"
+                        name="Charlie DeGennaro"
                         img={charlieImg}
                         degree="Bachelors"
                         position="Developer"
