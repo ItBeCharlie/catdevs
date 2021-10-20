@@ -10,16 +10,6 @@ interface NavBarProps {}
 export const NavBar: React.FC<NavBarProps> = ({}) => {
     const body = (
         <>
-            <NextLink href="/andrew">
-                <Link px="10px">
-                    <Description
-                        name="Andrew McDonald"
-                        img={andrewImg}
-                        degree="Bachelors"
-                        position="UI Engineer"
-                    />
-                </Link>
-            </NextLink>
             <NextLink href="/charlie">
                 <Link px="10px">
                     <Description
@@ -27,6 +17,16 @@ export const NavBar: React.FC<NavBarProps> = ({}) => {
                         img={charlieImg}
                         degree="Bachelors"
                         position="Developer"
+                    />
+                </Link>
+            </NextLink>
+            <NextLink href="/andrew">
+                <Link px="10px">
+                    <Description
+                        name="Andrew McDonald"
+                        img={andrewImg}
+                        degree="Bachelors"
+                        position="UI Engineer"
                     />
                 </Link>
             </NextLink>
