@@ -3,3 +3,6 @@ export const charlieImg = 'https://i.imgur.com/iM6q79s.png';
 export const trevorImg = 'https://i.imgur.com/bIWaVG1.png';
 
 export type coder = 'Andrew' | 'Charlie' | 'Trevor';
+
+export const numRows = 50;
+export const numCols = 50;

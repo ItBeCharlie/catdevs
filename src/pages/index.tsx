@@ -1,16 +1,16 @@
 import { Avatar, AvatarGroup } from '@chakra-ui/avatar';
-import { NavBar } from 'src/components/NavBar';
 import React, { useCallback, useState } from 'react';
+import { NavBar } from 'src/components/NavBar';
 import { ProjectProps } from 'src/components/Project';
-import { andrewImg, charlieImg, trevorImg } from 'src/utils/constants';
 import { Projects } from 'src/components/Projects';
+import { andrewImg, charlieImg, trevorImg } from 'src/utils/constants';
 
 const projects: ProjectProps[] = [
     {
-        name: 'Andrew',
+        name: "Conway's Game of Life",
         img: andrewImg,
-        link: 'god',
-        desc: 'A direct access to the realm of gods',
+        link: 'conway',
+        desc: 'Classic game of life with react.',
         authors: ['Andrew'],
     },
 ];
