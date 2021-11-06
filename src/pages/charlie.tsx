@@ -17,7 +17,7 @@ const charlie: React.FC<charlieProps> = ({}) => {
         >
             My name is Charlie
             <Description
-                name="Charlie Degennaro"
+                name="Charlie DeGennaro"
                 img={charlieImg}
                 degree="Bachelors"
                 position="Developer"

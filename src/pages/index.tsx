@@ -17,18 +17,18 @@ const projects: ProjectProps[] = [
 for (let i = 0; i < 3; i++) {
     projects.push({
         name: 'Charlie',
-        img: andrewImg,
-        link: 'god',
-        desc: 'A direct access to the realm of gods',
+        img: charlieImg,
+        link: 'peepee',
+        desc: 'A direct access to the realm of sigmas',
         authors: ['Charlie'],
     });
 }
 for (let i = 0; i < 4; i++) {
     projects.push({
         name: 'Trevor',
-        img: andrewImg,
+        img: trevorImg,
         link: 'god',
-        desc: 'A direct access to the realm of gods',
+        desc: 'A direct access to the realm of betas',
         authors: ['Trevor'],
     });
 }
@@ -47,18 +47,18 @@ const Index = () => {
     return (
         <>
             <NavBar />
-            <AvatarGroup spacing="10px">
-                <Avatar
-                    name="Andrew"
-                    src={andrewImg}
-                    className="pfp"
-                    onClick={() => filterByAuthor('Andrew')}
-                />
+            <AvatarGroup spacing="10px" ml="10px" mt="5px">
                 <Avatar
                     name="Charlie"
                     src={charlieImg}
                     className="pfp"
                     onClick={() => filterByAuthor('Charlie')}
+                />
+                <Avatar
+                    name="Andrew"
+                    src={andrewImg}
+                    className="pfp"
+                    onClick={() => filterByAuthor('Andrew')}
                 />
                 <Avatar
                     name="Trevor"
