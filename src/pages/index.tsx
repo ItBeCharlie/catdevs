@@ -13,6 +13,13 @@ const projects: ProjectProps[] = [
         desc: 'Classic game of life with react.',
         authors: ['Andrew'],
     },
+    {
+        name: 'Path Visualizer',
+        img: andrewImg,
+        link: 'visualizer',
+        desc: 'Path visualizer with maze generator.',
+        authors: ['Andrew'],
+    },
 ];
 for (let i = 0; i < 3; i++) {
     projects.push({
@@ -28,43 +35,61 @@ for (let i = 0; i < 4; i++) {
         name: 'Trevor',
         img: trevorImg,
         link: 'god',
-        desc: 'A direct access to the realm of betas',
+        desc: 'Top sigma alpha gamer in the realm of sigmas',
         authors: ['Trevor'],
     });
 }
 const Index = () => {
     const [proj] = useState(projects);
     const [filterProjects, setFilteredProjects] = useState(projects);
+    const [selectedAuthor, setSelectedAuthor] = useState('');
+
+    // console.log(selectedAuthor);
+    // useEffect(() => {
+
+    // }, [selectedAuthor])
 
     const filterByAuthor = useCallback(
         (author: string) => {
-            setFilteredProjects(
-                proj.filter((p) => p.authors.find((a) => a === author))
-            );
+            if (author === selectedAuthor) {
+                setFilteredProjects(proj);
+                setSelectedAuthor('');
+                console.log(true);
+            } else {
+                setFilteredProjects(
+                    proj.filter((p) => p.authors.find((a) => a === author))
+                );
+                setSelectedAuthor(author);
+                console.log(false);
+            }
+            console.log(author, selectedAuthor);
         },
-        [proj]
+        [proj, selectedAuthor]
     );
     return (
         <>
             <NavBar />
-            <AvatarGroup spacing="10px" ml="10px" mt="5px">
+            <AvatarGroup spacing='10px' ml='10px' mt='5px'>
                 <Avatar
-                    name="Charlie"
+                    name='Charlie'
                     src={charlieImg}
-                    className="pfp"
+                    className='pfp'
                     onClick={() => filterByAuthor('Charlie')}
+                    style={{ cursor: 'pointer' }}
                 />
                 <Avatar
-                    name="Andrew"
+                    name='Andrew'
                     src={andrewImg}
-                    className="pfp"
+                    className='pfp'
                     onClick={() => filterByAuthor('Andrew')}
+                    style={{ cursor: 'pointer' }}
                 />
                 <Avatar
-                    name="Trevor"
+                    name='Trevor'
                     src={trevorImg}
-                    className="pfp"
+                    className='pfp'
                     onClick={() => filterByAuthor('Trevor')}
+                    style={{ cursor: 'pointer' }}
                 />
             </AvatarGroup>
             <Projects items={filterProjects} />

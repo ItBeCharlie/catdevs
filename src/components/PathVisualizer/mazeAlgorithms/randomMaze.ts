@@ -1,0 +1,21 @@
+import { mazeAlg, node, wall } from '../constants';
+
+export class randomMaze implements mazeAlg {
+    public generate(grid: node[][], startNode: node, finishNode: node) {
+        if (!startNode || !finishNode || startNode === finishNode) return false;
+        const walls: wall[] = [];
+
+        for (let row = 0; row < grid.length; row++) {
+            for (let col = 0; col < grid[0].length; col++) {
+                if (
+                    (row === startNode.row && col === startNode.col) ||
+                    (row === finishNode.row && col === finishNode.col)
+                )
+                    continue;
+                if (Math.random() < 0.33) walls.push([row, col]);
+            }
+        }
+        walls.sort(() => Math.random() - 0.5);
+        return walls;
+    }
+}
